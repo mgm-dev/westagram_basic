@@ -1,23 +1,20 @@
-const idInput = document.querySelector('.login-id');
-const pwInput = document.querySelector('.login-pw');
-const loginBtn = document.querySelector('.login-btn');
+const loginPageInit = () => {
+  const idInput = document.querySelector('.login-page-id-input');
+  const pwInput = document.querySelector('.login-page-pw-input');
+  const loginBtn = document.querySelector('.login-page-login-btn');
 
-idInput.addEventListener('keyup', () => {
-  if (idInput.value != '' && pwInput.value != '') {
-    loginBtn.classList.replace('in-active', 'active');
-    loginBtn.disabled = false;
-  } else {
-    loginBtn.classList.replace('active', 'in-active');
-    loginBtn.disabled = true;
-  }
-});
+  const checkIfInputEmpty = () => {
+    idInput.value != '' && pwInput.value != ''
+      ? loginBtn.classList.replace('in-active', 'active')
+      : loginBtn.classList.replace('active', 'in-active');
 
-pwInput.addEventListener('keyup', () => {
-  if (idInput.value != '' && pwInput.value != '') {
-    loginBtn.classList.replace('in-active', 'active');
-    loginBtn.disabled = false;
-  } else {
-    loginBtn.classList.replace('active', 'in-active');
-    loginBtn.disabled = true;
-  }
-});
+    idInput.value != '' && pwInput.value != ''
+      ? (loginBtn.disabled = false)
+      : (loginBtn.disabled = true);
+  };
+
+  idInput.addEventListener('keyup', checkIfInputEmpty);
+  pwInput.addEventListener('keyup', checkIfInputEmpty);
+};
+
+loginPageInit();

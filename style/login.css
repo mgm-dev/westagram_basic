@@ -1,16 +1,18 @@
-.container {
+/* main styling */
+
+.main-container {
   width: 90%;
   margin: auto;
   padding-top: 95px;
   padding-bottom: 145px;
 }
 
-.main-section {
+main {
   display: flex;
   justify-content: center;
 }
 
-.login-showcase {
+.login-page-showcase {
   position: relative;
   background-image: url('../img/login_bg.png');
   width: 454px;
@@ -18,83 +20,150 @@
   margin-right: -20px;
 }
 
-.login-showcase img {
+.slide {
   position: absolute;
   bottom: 91px;
   left: 151px;
 }
 
-.login-container {
-  width: 350px;
+/* form styling */
+
+.login-page-form-container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 350px;
 }
 
-.login-form {
-  background: #fff;
-  border: #ccc 1px solid;
-  width: 350px;
-  margin-top: 30px;
+.login-page-form {
   display: flex;
   flex-direction: column;
+  width: 350px;
+  margin-top: 30px;
   padding: 30px 25px 20px 25px;
+  background: #fff;
+  border: #ccc 1px solid;
   text-align: center;
 }
 
-.login-logo {
+.login-page-logo {
   width: 175px;
   height: 51px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 30px;
+  margin: 0 auto 30px auto;
 }
 
-.login-id,
-.login-pw,
-.login-btn {
+.login-page-id-input,
+.login-page-pw-input,
+.login-page-login-btn {
+  margin: 5px 10px 5px 10px;
+  padding: 9px 0 7px 8px;
   background: #fafafa;
   border: 1px #ccc solid;
-  font-size: 16px;
-  padding: 9px 0 7px 8px;
-  margin: 5px 10px 5px 10px;
-  font-size: 16px;
-  line-height: 18px;
-  text-overflow: ellipsis;
   border-radius: 3px;
   font-size: 14px;
+  line-height: 18px;
+  text-overflow: ellipsis;
 }
 
-.login-btn {
+.login-page-login-btn {
+  height: 30px;
   color: #fff;
   background-color: #0095f6;
-  height: 30px;
-  line-height: 14px;
   border: none;
+  line-height: 14px;
   font-weight: 500;
 }
 
-.login-divider {
-  margin-top: 10px;
-  display: flex;
+/* divider : draws horizontal line */
+
+.login-page-form-divider {
   margin: 10px 10px 0 10px;
+  display: flex;
 }
 
-.login-divider::before,
-.login-divider::after {
+.login-page-form-divider::before,
+.login-page-form-divider::after {
   content: '';
   border-bottom: 0.05rem solid #ccc;
   flex: 1;
   margin: auto;
 }
 
-.login-divider::after {
+.login-page-form-divider::after {
   margin-left: 15px;
 }
 
-.login-divider::before {
+.login-page-form-divider::before {
   margin-right: 15px;
 }
+
+.login-page-facebook-login {
+  margin-top: 30px;
+}
+
+.login-page-forget-password {
+  margin-top: 20px;
+  font-size: 12px;
+}
+
+.login-page-signup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  width: 100%;
+  height: 63px;
+  border: 1px #ccc solid;
+  background: #fff;
+  font-size: 15px;
+}
+
+.login-page-signup a {
+  margin-left: 5px;
+  color: #0095f6;
+  font-weight: bold;
+}
+
+.login-page-stores {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.login-page-store-img {
+  margin-top: 20px;
+  width: 136px;
+}
+
+.login-page-copyright {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #666;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.login-page-facebook {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.login-page-facebook-thumb {
+  display: inline-block;
+  position: relative;
+  height: 18px;
+  margin-right: 10px;
+}
+
+.login-page-facebook-text {
+  color: #385185;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+/* footer styling */
 
 footer {
   margin-left: auto;
@@ -106,80 +175,17 @@ footer {
 }
 
 footer ul {
-  font-size: 12px;
   display: flex;
+  font-size: 12px;
 }
 
 footer li {
   margin-right: 15px;
-  font-weight: bold;
   color: #003782;
-}
-
-.login-facebook {
-  margin-top: 30px;
-}
-
-.login-forget {
-  margin-top: 20px;
-  font-size: 12px;
-}
-
-.login-signup {
-  margin-top: 10px;
-  width: 100%;
-  height: 63px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 1px #ccc solid;
-  font-size: 15px;
-}
-
-.login-signup a {
-  margin-left: 5px;
   font-weight: bold;
-  color: #0095f6;
 }
 
-.login-stores {
-  margin-top: 20px;
-  text-align: center;
-  font-size: 14px;
-}
-
-.login-store-img {
-  margin-top: 20px;
-  width: 136px;
-}
-
-.login-copyright {
-  font-family: Arial, Helvetica, sans-serif;
-  color: #666;
-  font-size: 12px;
-  font-weight: 500;
-}
-
-.login-facebook {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  font-size: 15px;
-  font-weight: 600;
-}
-
-.login-facebook-thumb {
-  display: inline-block;
-  height: 18px;
-  position: relative;
-  margin-right: 10px;
-}
-
-.login-facebook-text {
-  color: #385185;
-  font-weight: 600;
-  font-size: 14px;
-}
+/* slide show animation */
 
 .slide {
   position: absolute;
@@ -225,5 +231,29 @@ footer li {
   }
   100% {
     opacity: 1;
+  }
+}
+
+/* media querys */
+
+@media (max-width: 1000px) {
+  .login-page-showcase {
+    display: none;
+  }
+
+  footer {
+    display: block;
+  }
+}
+
+@media (max-width: 700px) {
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  footer ul {
+    justify-content: center;
+    flex-wrap: wrap;
   }
 }
