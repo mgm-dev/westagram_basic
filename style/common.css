@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  line-height: 1rem;
+  box-sizing: border-box;
+  list-style-type: none;
+}
+
+body {
+  background: #fafafa;
+}
+
+input {
+  display: block;
+}
+
+input:focus {
+  outline: none;
+  border: 1px solid #333;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: #000;
+}
+
+.in-active {
+  opacity: 0.4;
+  cursor: default;
+}

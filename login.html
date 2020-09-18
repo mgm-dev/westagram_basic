@@ -1,61 +1,81 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>repl.it</title>
+    <link href="style/common.css" rel="stylesheet" type="text/css" />
+    <link href="style/login.css" rel="stylesheet" type="text/css" />
+  </head>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>repl.it</title>
-  <link href="style/common.css" rel="stylesheet" type="text/css" />
-  <link href="style/login.css" rel="stylesheet" type="text/css" />
-</head>
-
-<body>
-  <div class="container">
-    <div class="main-section">
-      <div class="login-showcase">
-        <img src="img/login_1.jpg" alt="">
-      </div>
-      <div class="login-container">
-        <form class="login-form" action="">
-          <img src="img/logo_text.png" alt="">
-          <input class="login-id" type="text" placeholder="전화번호, 사용자 이름 또는 이메일">
-          <input class="login-pw" type="password" placeholder="비밀번호">
-          <input class="login-btn" type="submit" value="로그인">
-          <div class="login-divider">또는</div>
-          <a href="">Facebook으로 로그인</a>
-          <a href="">비밀번호를 잊으셨나요?</a>
-        </form>
-        <div class="login-signup">
-          <span>계정이 없으신가요?</span>
-          <a href="">가입하기</a>
+  <body>
+    <div class="container">
+      <div class="main-section">
+        <div class="login-showcase">
+          <img class="slide" src="img/login_1.jpg" alt="" />
+          <img class="slide" src="img/login_2.jpg" alt="" />
+          <img class="slide" src="img/login_3.jpg" alt="" />
+          <img class="slide" src="img/login_4.jpg" alt="" />
+          <img class="slide" src="img/login_5.jpg" alt="" />
         </div>
-        <div class="login-stores">
-          <div>앱을 다운로드하세요.</div>
-          <div>
-            <img src="" alt="">
-            <img src="" alt="">
+        <div class="login-container">
+          <form class="login-form" action="">
+            <img class="login-logo" src="img/logo_text.png" alt="" />
+            <input
+              class="login-id"
+              type="text"
+              placeholder="전화번호, 사용자 이름 또는 이메일"
+            />
+            <input class="login-pw" type="password" placeholder="비밀번호" />
+            <input class="login-btn in-active" type="submit" value="로그인" />
+            <div class="login-divider">
+              <span> 또는 </span>
+            </div>
+            <a class="login-facebook" href="">
+              <img class="login-facebook-thumb" src="img/facebook.png" alt="" />
+              <span class="login-facebook-text">Facebook</span>
+              으로 로그인
+            </a>
+            <a class="login-forget" href="">비밀번호를 잊으셨나요?</a>
+          </form>
+          <div class="login-signup">
+            <span>계정이 없으신가요?</span>
+            <a href="">가입하기</a>
+          </div>
+          <div class="login-stores">
+            <div>앱을 다운로드하세요.</div>
+            <div>
+              <a href="">
+                <img class="login-store-img" src="img/ios.png" alt="ios" />
+              </a>
+              <a href="">
+                <img
+                  class="login-store-img"
+                  src="img/android.png"
+                  alt="android"
+                />
+              </a>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <footer class="login-footer">
-    <ul>
-      <li><a href="">소개</a></li>
-      <li><a href="">도움말</a></li>
-      <li><a href="">홍보 센터</a></li>
-      <li><a href="">API</a></li>
-      <li><a href="">채용 정보</a></li>
-      <li><a href="">개인정보처리방침</a></li>
-      <li><a href="">약관</a></li>
-      <li><a href="">위치</a></li>
-      <li><a href="">인기 계정</a></li>
-      <li><a href="">해시태그</a></li>
-      <li><a href="">언어</a></li>
-    </ul>
-    <div>&copy; INSTAGRAM FROM FACEBOOK</div>
-  </footer>
-  <script src="js/login.js"></script>
-</body>
-
+    <footer class="login-footer">
+      <ul>
+        <li><a href="">소개</a></li>
+        <li><a href="">도움말</a></li>
+        <li><a href="">홍보 센터</a></li>
+        <li><a href="">API</a></li>
+        <li><a href="">채용 정보</a></li>
+        <li><a href="">개인정보처리방침</a></li>
+        <li><a href="">약관</a></li>
+        <li><a href="">위치</a></li>
+        <li><a href="">인기 계정</a></li>
+        <li><a href="">해시태그</a></li>
+        <li><a href="">언어</a></li>
+      </ul>
+      <div class="login-copyright">&copy; 2020 INSTAGRAM FROM FACEBOOK</div>
+    </footer>
+    <script src="js/login.js"></script>
+  </body>
 </html>
