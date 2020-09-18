@@ -29,5 +29,8 @@ a:visited {
 
 .in-active {
   opacity: 0.4;
-  cursor: default;
+}
+
+.active {
+  cursor: pointer;
 }

@@ -27,7 +27,12 @@
               placeholder="전화번호, 사용자 이름 또는 이메일"
             />
             <input class="login-pw" type="password" placeholder="비밀번호" />
-            <input class="login-btn in-active" type="submit" value="로그인" />
+            <input
+              class="login-btn in-active"
+              type="submit"
+              value="로그인"
+              disabled
+            />
             <div class="login-divider">
               <span> 또는 </span>
             </div>
@@ -76,6 +81,6 @@
       </ul>
       <div class="login-copyright">&copy; 2020 INSTAGRAM FROM FACEBOOK</div>
     </footer>
-    <script src="js/login.js"></script>
+    <script src="js/login.js" defer></script>
   </body>
 </html>
