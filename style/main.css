@@ -136,12 +136,22 @@ main {
   margin-right: 15px;
 }
 
-.main-page-main-right-my-profile {
+.main-page-main-right-story {
+  overflow: scroll;
+  overflow-x: hidden;
+  height: 25%;
+}
+.main-page-main-right-story::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
 }
 
-.main-page-main-right-story,
+.main-page-main-right-story {
+  padding: 0 15px 5px 15px;
+}
+
 .main-page-main-right-recommend {
-  padding: 15px;
+  padding: 15px 15px 5px 15px;
 }
 
 .main-page-main-right-story-top,
@@ -150,6 +160,13 @@ main {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 10px;
+}
+
+.main-page-main-right-story-top {
+  position: sticky;
+  top: 0;
+  background: #fff;
+  padding: 15px 0 10px 0;
 }
 
 .main-page-main-right-recommend-top div,
@@ -166,7 +183,10 @@ main {
 }
 
 .main-page-main-right-story img {
-  border: 1px solid rgb(247, 46, 46);
+  border: 2px solid rgb(247, 46, 46);
+  padding: 2px;
+  width: 50px;
+  height: 50px;
 }
 
 .main-page-main-right-recommend img,
@@ -175,6 +195,12 @@ main {
   width: 40px;
   height: 40px;
   margin-right: 5px;
+}
+
+.main-page-main-right-story-profile {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 10px;
 }
 
 .main-page-main-right-recommend-profile {
