@@ -98,6 +98,9 @@ main {
 }
 
 .login-page-facebook-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-top: 30px;
 }
 
@@ -154,7 +157,7 @@ main {
   display: inline-block;
   position: relative;
   height: 18px;
-  margin-right: 10px;
+  margin-right: 8px;
 }
 
 .login-page-facebook-text {
