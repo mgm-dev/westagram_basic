@@ -200,31 +200,31 @@ footer li {
 }
 
 .slide:nth-child(1) {
-  -webkit-animation: fade 25s 20s infinite;
+  animation: fade 25s 20s infinite;
   z-index: 10;
 }
 
 .slide:nth-child(2) {
-  -webkit-animation: fade 25s 15s infinite;
+  animation: fade 25s 15s infinite;
   z-index: 10;
 }
 
 .slide:nth-child(3) {
-  -webkit-animation: fade 25s 10s infinite;
+  animation: fade 25s 10s infinite;
   z-index: 10;
 }
 
 .slide:nth-child(4) {
-  -webkit-animation: fade 25s 5s infinite;
+  animation: fade 25s 5s infinite;
   z-index: 10;
 }
 
 .slide:nth-child(5) {
-  -webkit-animation: fade 25s 0s infinite;
+  animation: fade 25s 0s infinite;
   z-index: 10;
 }
 
-@-webkit-keyframes fade {
+@keyframes fade {
   0% {
     opacity: 1;
   }

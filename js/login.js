@@ -1,4 +1,5 @@
 const loginPageInit = () => {
+  const loginForm = document.querySelector('.login-form');
   const idInput = document.querySelector('.id-input');
   const pwInput = document.querySelector('.pw-input');
   const loginBtn = document.querySelector('.login-btn');
@@ -13,8 +14,17 @@ const loginPageInit = () => {
       : (loginBtn.disabled = true);
   };
 
+  const validateInput = () => {
+    if (idInput.value.includes('@') && pwInput.value.length > 4) {
+      alert('validated!');
+      return;
+    }
+    alert('please check pw and id');
+  };
+
   idInput.addEventListener('keyup', checkIfInputEmpty);
   pwInput.addEventListener('keyup', checkIfInputEmpty);
+  loginForm.addEventListener('submit', validateInput);
 };
 
 loginPageInit();

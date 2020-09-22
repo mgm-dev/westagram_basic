@@ -29,14 +29,6 @@ a:visited {
   color: #262626;
 }
 
-.inactive {
-  opacity: 0.4;
-}
-
-.active {
-  cursor: pointer;
-}
-
 button {
   cursor: pointer;
   border: 0;
@@ -46,7 +38,15 @@ button:focus {
   outline: 0;
 }
 
-/* text color change classes */
+/* utility classes */
+
+.inactive {
+  opacity: 0.4;
+}
+
+.active {
+  cursor: pointer;
+}
 
 .text-bold-grey {
   color: #999;
@@ -69,4 +69,12 @@ button:focus {
 
 .position-relative {
   position: relative;
+}
+
+.circle-crop {
+  border-radius: 50%;
+}
+
+.display-none {
+  display: none;
 }
