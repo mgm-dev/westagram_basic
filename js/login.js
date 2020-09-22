@@ -1,12 +1,12 @@
 const loginPageInit = () => {
-  const idInput = document.querySelector('.login-page-id-input');
-  const pwInput = document.querySelector('.login-page-pw-input');
-  const loginBtn = document.querySelector('.login-page-login-btn');
+  const idInput = document.querySelector('.id-input');
+  const pwInput = document.querySelector('.pw-input');
+  const loginBtn = document.querySelector('.login-btn');
 
   const checkIfInputEmpty = () => {
     idInput.value != '' && pwInput.value != ''
-      ? loginBtn.classList.replace('in-active', 'active')
-      : loginBtn.classList.replace('active', 'in-active');
+      ? loginBtn.classList.replace('inactive', 'active')
+      : loginBtn.classList.replace('active', 'inactive');
 
     idInput.value != '' && pwInput.value != ''
       ? (loginBtn.disabled = false)

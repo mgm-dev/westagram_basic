@@ -1,5 +1,10 @@
 /* main styling */
 
+main {
+  display: flex;
+  justify-content: center;
+}
+
 .main-container {
   width: 90%;
   margin: auto;
@@ -7,12 +12,7 @@
   padding-bottom: 145px;
 }
 
-main {
-  display: flex;
-  justify-content: center;
-}
-
-.login-page-showcase {
+.showcase {
   position: relative;
   background-image: url('../img/login_bg.png');
   width: 454px;
@@ -28,14 +28,14 @@ main {
 
 /* form styling */
 
-.login-page-form-container {
+.form-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 350px;
 }
 
-.login-page-form {
+.login-form {
   display: flex;
   flex-direction: column;
   width: 350px;
@@ -43,18 +43,19 @@ main {
   padding: 30px 25px 20px 25px;
   background: #fff;
   border: #ccc 1px solid;
+  border-radius: 2px;
   text-align: center;
 }
 
-.login-page-logo {
+.logo {
   width: 175px;
   height: 51px;
   margin: 0 auto 30px auto;
 }
 
-.login-page-id-input,
-.login-page-pw-input,
-.login-page-login-btn {
+.id-input,
+.pw-input,
+.login-btn {
   margin: 5px 10px 5px 10px;
   padding: 9px 0 7px 8px;
   background: #fafafa;
@@ -65,7 +66,12 @@ main {
   text-overflow: ellipsis;
 }
 
-.login-page-login-btn {
+.id-input:focus,
+.pw-input:focus {
+  border: 1px solid #333;
+}
+
+.login-btn {
   height: 30px;
   color: #fff;
   background-color: #0095f6;
@@ -76,40 +82,40 @@ main {
 
 /* divider : draws horizontal line */
 
-.login-page-form-divider {
+.form-divider {
   margin: 10px 10px 0 10px;
   display: flex;
 }
 
-.login-page-form-divider::before,
-.login-page-form-divider::after {
+.form-divider::before,
+.form-divider::after {
   content: '';
   border-bottom: 0.05rem solid #ccc;
   flex: 1;
   margin: auto;
 }
 
-.login-page-form-divider::after {
+.form-divider::after {
   margin-left: 15px;
 }
 
-.login-page-form-divider::before {
+.form-divider::before {
   margin-right: 15px;
 }
 
-.login-page-facebook-login {
+.facebook-login {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 30px;
 }
 
-.login-page-forget-password {
+.forgot-password {
   margin-top: 20px;
   font-size: 12px;
 }
 
-.login-page-signup {
+.signup {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -121,31 +127,30 @@ main {
   font-size: 15px;
 }
 
-.login-page-signup a {
+.signup a {
   margin-left: 5px;
   color: #0095f6;
   font-weight: bold;
 }
 
-.login-page-stores {
+.stores {
   margin-top: 20px;
   text-align: center;
   font-size: 14px;
 }
 
-.login-page-store-img {
+.store-img {
   margin-top: 20px;
   width: 136px;
 }
 
-.login-page-copyright {
-  font-family: Arial, Helvetica, sans-serif;
+.copyright {
   color: #666;
   font-size: 12px;
   font-weight: 500;
 }
 
-.login-page-facebook {
+.facebook {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -153,14 +158,14 @@ main {
   font-weight: 600;
 }
 
-.login-page-facebook-thumb {
+.facebook-thumb {
   display: inline-block;
   position: relative;
   height: 18px;
   margin-right: 8px;
 }
 
-.login-page-facebook-text {
+.facebook-text {
   color: #385185;
   font-weight: 600;
   font-size: 14px;
@@ -240,7 +245,7 @@ footer li {
 /* media querys */
 
 @media (max-width: 1000px) {
-  .login-page-showcase {
+  .showcase {
     display: none;
   }
 

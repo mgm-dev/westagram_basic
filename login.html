@@ -12,79 +12,73 @@
     <h1 hidden>instagram login page</h1>
     <div class="main-container">
       <main>
-        <div class="login-page-showcase">
+        <section class="showcase">
           <img class="slide" src="img/login_1.jpg" alt="slide1" />
           <img class="slide" src="img/login_2.jpg" alt="slide2" />
           <img class="slide" src="img/login_3.jpg" alt="slide3" />
           <img class="slide" src="img/login_4.jpg" alt="slide4" />
           <img class="slide" src="img/login_5.jpg" alt="slide5" />
-        </div>
-        <div class="login-page-form-container">
-          <form class="login-page-form" action="">
-            <img
-              class="login-page-logo"
-              src="img/logo_text.png"
-              alt="instagram-logo"
-            />
+        </section>
+        <section class="form-container">
+          <form class="login-form" action="">
+            <img class="logo" src="img/logo_text.png" alt="instagram-logo" />
             <input
-              class="login-page-id-input"
+              class="id-input"
               type="text"
               placeholder="전화번호, 사용자 이름 또는 이메일"
               name="id"
             />
             <input
-              class="login-page-pw-input"
+              class="pw-input"
               type="password"
               placeholder="비밀번호"
               name="pw"
             />
             <input
-              class="login-page-login-btn in-active"
+              class="login-btn inactive"
               type="submit"
               value="로그인"
               disabled
             />
-            <div class="login-page-form-divider">또는</div>
-            <a class="login-page-facebook-login" href="">
+            <div class="form-divider">또는</div>
+            <a class="facebook-login" href="">
               <img
-                class="login-page-facebook-thumb"
+                class="facebook-thumb"
                 src="img/facebook.png"
                 alt="facebook-thumbnail"
               />
-              <span class="login-page-facebook-text">Facebook</span>
+              <span class="facebook-text">Facebook</span>
               으로 로그인
             </a>
-            <a class="login-page-forget-password" href=""
-              >비밀번호를 잊으셨나요?</a
-            >
+            <a class="forgot-password" href="">비밀번호를 잊으셨나요?</a>
           </form>
-          <div class="login-page-signup">
+          <div class="signup">
             <span>계정이 없으신가요?</span>
             <a href="">가입하기</a>
           </div>
-          <div class="login-page-stores">
+          <div class="stores">
             <div>앱을 다운로드하세요.</div>
             <div>
               <a href="">
                 <img
-                  class="login-page-store-img"
+                  class="store-img"
                   src="img/app-store.png"
                   alt="app-store"
                 />
               </a>
               <a href="">
                 <img
-                  class="login-page-store-img"
+                  class="store-img"
                   src="img/play-store.png"
                   alt="play-store"
                 />
               </a>
             </div>
           </div>
-        </div>
+        </section>
       </main>
     </div>
-    <footer class="login-page-footer">
+    <footer class="footer">
       <ul>
         <li><a href="">소개</a></li>
         <li><a href="">도움말</a></li>
@@ -98,9 +92,7 @@
         <li><a href="">해시태그</a></li>
         <li><a href="">언어</a></li>
       </ul>
-      <div class="login-page-copyright">
-        &copy; 2020 INSTAGRAM FROM FACEBOOK
-      </div>
+      <div class="copyright">&copy; 2020 INSTAGRAM FROM FACEBOOK</div>
     </footer>
     <script src="js/login.js" defer></script>
   </body>
