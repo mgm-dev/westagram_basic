@@ -99,6 +99,57 @@ const initMain = () => {
   commentDislikeButtonList.forEach((item) => {
     item.addEventListener('click', dislikeComment);
   });
+
+  // dummy user search
+  const dummyUsers = [
+    {
+      name: 'sonic_the_hedgehog',
+      ment: 'gotta go fast',
+      url: '/img/sonic.jpg',
+    },
+    {
+      name: 'pickachu',
+      ment: 'picka picka!',
+      url: '/img/pickachu.jpg',
+    },
+    {
+      name: 'super_mario',
+      ment: 'its me, mario',
+      url: '/img/mario.png',
+    },
+    {
+      name: 'link_not_zelda',
+      ment: 'my name is link',
+      url: '/img/link.jpg',
+    },
+  ];
+
+  const searchUser = (name) => {
+    const searchResult = dummyUsers.filter((user) => user.name.includes(name));
+    return searchResult;
+  };
+
+  // menu box
+  const navMypageButton = document.querySelector('.nav-mypage-button');
+  const menuBox = document.querySelector('.menu-box');
+
+  const showMenuBox = (e) => {
+    e.preventDefault();
+    menuBox.classList.toggle('display-none');
+  };
+  const hideMenuBox = () => {
+    menuBox.classList.add('display-none');
+  };
+
+  navMypageButton.addEventListener('click', showMenuBox);
+  window.addEventListener('click', (e) => {
+    if (
+      e.target.parentNode != menuBox &&
+      e.target.parentNode != navMypageButton
+    ) {
+      hideMenuBox();
+    }
+  });
 };
 
 initMain();
