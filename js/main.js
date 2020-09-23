@@ -15,11 +15,14 @@ const initMain = () => {
   const commentDislikeButtonList = document.querySelectorAll(
     '.dislike-comment-button'
   );
+  const searchResultBox = document.querySelector('.search-result-box');
+  const searchResultList = document.querySelector('.search-result-list');
 
   const turnOnSearch = () => {
-    navSearchIcon.style.left = '5px';
+    navSearchIcon.style.left = '10px';
     navSearchbar.style.textAlign = 'left';
-    navSearchbar.style.paddingLeft = '18px';
+    navSearchbar.style.paddingLeft = '25px';
+    searchResultBox.classList.remove('display-none');
   };
 
   const turnOffSearch = () => {
@@ -27,6 +30,7 @@ const initMain = () => {
     navSearchbar.style.textAlign = 'center';
     navSearchbar.style.paddingLeft = '0';
     navSearchbar.value = '';
+    searchResultBox.classList.add('display-none');
   };
 
   const addComment = () => {
@@ -115,7 +119,7 @@ const initMain = () => {
     {
       name: 'super_mario',
       ment: 'its me, mario',
-      url: '/img/mario.png',
+      url: '/img/mario.jpg',
     },
     {
       name: 'link_not_zelda',
@@ -124,10 +128,41 @@ const initMain = () => {
     },
   ];
 
-  const searchUser = (name) => {
+  const filterUserByName = (name) => {
+    if (name === '') {
+      console.log('fire');
+      return;
+    }
     const searchResult = dummyUsers.filter((user) => user.name.includes(name));
     return searchResult;
   };
+
+  const showSearchResult = (searchResult) => {
+    if (searchResult === undefined || searchResult.length === 0) {
+      const resultElement = document.createElement('LI');
+      resultElement.innerHTML = `<div class="search-result-item">
+          검색 결과가 없습니다
+      </div>`;
+      searchResultList.append(resultElement);
+      return;
+    }
+    searchResult.forEach((result) => {
+      const resultElement = document.createElement('LI');
+      resultElement.innerHTML = `<div class="search-result-item">
+        <img src="${result.url}" alt="" />
+        <div>
+          <div class="text-bold-black">${result.name}</div>
+          <div class="text-grey">${result.ment}</div>
+        </div>
+      </div>`;
+      searchResultList.append(resultElement);
+    });
+  };
+
+  navSearchbar.addEventListener('keyup', () => {
+    searchResultList.innerHTML = '';
+    showSearchResult(filterUserByName(navSearchbar.value));
+  });
 
   // menu box
   const navMypageButton = document.querySelector('.nav-mypage-button');

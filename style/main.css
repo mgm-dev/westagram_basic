@@ -15,7 +15,6 @@ button {
 }
 
 /* navbar styling*/
-
 .nav-container {
   display: flex;
   align-items: center;
@@ -46,10 +45,10 @@ button {
 }
 
 .nav-search-icon {
-  height: 12px;
   position: absolute;
   top: 7px;
   left: 70px;
+  height: 12px;
 }
 
 .nav-searchbar {
@@ -67,7 +66,6 @@ button {
 }
 
 /* main section styling*/
-
 main {
   display: flex;
   justify-content: center;
@@ -75,7 +73,6 @@ main {
 }
 
 /* maing feed section(main-left) */
-
 .feed {
   background: #fff;
   border: #dbdbdb 1px solid;
@@ -221,7 +218,6 @@ main {
 }
 
 /* main-right(recommend for you section) */
-
 .main-right {
   position: sticky;
   top: 100px;
@@ -344,7 +340,6 @@ main {
 }
 
 /* story */
-
 .story-list {
   display: flex;
   justify-content: flex-start;
@@ -406,24 +401,68 @@ main {
 }
 
 .menu-box::after {
-  background: #fff;
-  content: '';
   position: absolute;
-  width: 0;
-  height: 0;
   top: 1px;
   right: 25px;
+  background: #fff;
+  content: '';
+  width: 0;
+  height: 0;
   box-sizing: border-box;
 
-  border: 10px solid #fff;
+  border: 8px solid #fff;
   transform-origin: 0 0;
   transform: rotate(-45deg);
 
   box-shadow: 3px -3px 3px 0px rgba(200, 200, 200, 0.5);
 }
 
-/* media querys */
+/* search result box */
+.search-result-box {
+  position: absolute;
+  top: 60px;
+  right: calc(50% - 112px);
+  background: #fff;
+  border: 1px solid #dbdbdb;
+  border-radius: 2px;
+  width: 224px;
+  z-index: 5;
+}
 
+.search-result-box::after {
+  position: absolute;
+  top: 1px;
+  right: calc(50% - 11px);
+  background: #fff;
+  content: '';
+  width: 0;
+  height: 0;
+  box-sizing: border-box;
+
+  border: 8px solid #fff;
+  transform-origin: 0 0;
+  transform: rotate(-45deg);
+
+  box-shadow: 3px -3px 3px 0px rgba(200, 200, 200, 0.5);
+}
+
+.search-result-item {
+  display: flex;
+  border-bottom: 1px solid #dbdbdb;
+  align-items: center;
+  height: 67px;
+  padding: 8px 14px;
+  font-size: 14px;
+}
+
+.search-result-box li img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+/* media querys */
 @media (max-width: 1000px) {
   .main-right {
     display: none;
