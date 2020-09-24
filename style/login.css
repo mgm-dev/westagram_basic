@@ -1,5 +1,4 @@
 /* main styling */
-
 main {
   display: flex;
   justify-content: center;
@@ -27,7 +26,6 @@ main {
 }
 
 /* form styling */
-
 .form-container {
   display: flex;
   flex-direction: column;
@@ -81,7 +79,6 @@ main {
 }
 
 /* divider : draws horizontal line */
-
 .form-divider {
   display: flex;
   margin: 10px 10px 0 10px;
@@ -172,7 +169,6 @@ main {
 }
 
 /* footer styling */
-
 footer {
   display: flex;
   margin-left: auto;
@@ -194,7 +190,6 @@ footer li {
 }
 
 /* slide show animation */
-
 .slide {
   position: absolute;
 }
@@ -243,7 +238,6 @@ footer li {
 }
 
 /* media querys */
-
 @media (max-width: 1000px) {
   .showcase {
     display: none;

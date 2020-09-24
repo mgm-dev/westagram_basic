@@ -30,6 +30,7 @@ a:visited {
 }
 
 button {
+  background: transparent;
   cursor: pointer;
   border: 0;
 }

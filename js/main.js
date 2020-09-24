@@ -130,7 +130,6 @@ const initMain = () => {
 
   const filterUserByName = (name) => {
     if (name === '') {
-      console.log('fire');
       return;
     }
     const searchResult = dummyUsers.filter((user) => user.name.includes(name));
